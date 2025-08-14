@@ -15,11 +15,11 @@
 
 ## Key Features 🌟
 
-- **Enable RealView 🛠️:** [Simplifies RealView Activation](https://github.com/ianalexis/RealViewOn/blob/main/assets/images/BeforeAfter.png?raw=true) for any GPU, including non-certified ones, by creating a `.reg` file to run in a straightforward way without needing to browse regedit.  
-  <img src="https://github.com/ianalexis/RealViewOn/blob/main/assets/images/BeforeAfter.png?raw=true" alt="RealView Activation" height="200">
+- **Enable RealView 🛠️:** [Simplifies RealView Activation](https://github.com/ianalexis/RealViewOn/blob/main/assets/images/BeforeAfter.png) for any GPU, including non-certified ones, by creating a `.reg` file to run in a straightforward way without needing to browse regedit.  
+  <img alt="BeforeAfter-little" src="https://github.com/ianalexis/RealViewOn/blob/main/assets/images/BeforeAfter-little.png?raw=true" height="200">
 
-- **Fixes Visual & Graphics Issues 🖼️:** Resolves many common [graphical errors and visual glitches](https://github.com/ianalexis/RealViewOn/blob/main/assets/images/SketchVisualError.png?raw=true) users experience when enabling Enhanced Graphics Performance.  
-  <img src="https://github.com/ianalexis/RealViewOn/blob/main/assets/images/SketchVisualError.png?raw=true" alt="Sketch Visual Error" height="200">
+- **Fixes Visual & Graphics Issues 🖼️:** Resolves many common [graphical errors and visual glitches](https://github.com/ianalexis/RealViewOn/blob/main/assets/images/SketchVisualError.png) users experience when enabling Enhanced Graphics Performance.  
+  <img alt="SketchVisualError-little" src="https://github.com/ianalexis/RealViewOn/blob/main/assets/images/SketchVisualError-little.png?raw=true" height="200">
 
 - **Advanced Mode 🛠️:** Allows for [additional configurations](#advance-mode-️) to be made to the SolidWorks registry, such as enabling Dark Mode, FPS Viewer, and more.
 - **Supports Old & New Methods 🕰️:** Works with both old and new methods as needed.
