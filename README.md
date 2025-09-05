@@ -137,3 +137,13 @@ SolidWorks & RealView are registered trademarks of Dassault Systèmes.
   - **🦇 LLVM Clang:** C++ [Compiler](https://clang.llvm.org/).
   - **🗜️ UPX:** Ultimate [Packer](https://github.com/upx/upx) for eXecutables.
   - **📦 7-Zip:** File [archiver](https://www.7-zip.org/).
+
+## Star History
+
+<a href="https://www.star-history.com/#ianalexis/Real-View-On-Releases&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ianalexis/Real-View-On-Releases&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ianalexis/Real-View-On-Releases&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ianalexis/Real-View-On-Releases&type=Date" />
+ </picture>
+</a>
