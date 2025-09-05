@@ -15,7 +15,7 @@
 
 ## Key Features 🌟
 
-- **Enable RealView 🛠️:** [Simplifies RealView Activation](https://github.com/ianalexis/RealViewOn/blob/main/assets/images/BeforeAfter.png) for any GPU, including non-certified ones, by creating a `.reg` file to run in a straightforward way without needing to browse regedit.  
+- **Enable RealView 🛠️:** [Simplifies RealView Activation](https://github.com/ianalexis/RealViewOn/blob/main/assets/images/BeforeAfter.png) for [any GPU](#gpu), including non-certified ones, by creating a `.reg` file to run in a straightforward way without needing to browse regedit.  
   <img alt="BeforeAfter-little" src="https://github.com/ianalexis/RealViewOn/blob/main/assets/images/BeforeAfter-little.png?raw=true" height="200">
 
 - **Fixes Visual & Graphics Issues 🖼️:** Resolves many common [graphical errors and visual glitches](https://github.com/ianalexis/RealViewOn/blob/main/assets/images/SketchVisualError.png) users experience when enabling Enhanced Graphics Performance.  
@@ -106,18 +106,25 @@ It is simple, fast, safe, requires no technical knowledge and will help us to im
 
 ## Compatibility 🖥️
 
-- **SolidWorks:** Versions after 2010.
-- **GPU Brand:**
-  - 🟢Nvidia ⭐⭐⭐⭐
-  - 🔴AMD ⭐⭐
-  - 🔵Intel ⭐⭐
+### SolidWorks
 
-- *Reliability*
-  - ⭐⭐⭐⭐⭐: [GPU Microarchitectures tested > 3] && [SW versions tested per generation > 2]
-  - ⭐⭐⭐⭐: [GPU Microarchitectures tested > 2] && [SW versions tested per generation > 2]
-  - ⭐⭐⭐: [GPUs tested > 1] && [SW versions tested > 1]
-  - ⭐⭐: [Actual GPU tested]
-  - ⭐: [Theoretical testing]
+Ready to work with any version after 2010, as it adapts the corresponding patch method according to the version.
+
+> [!NOTE]
+> It should even work in earlier versions, but these are considered obsolete. If you require compatibility with an older version, please raise an issue and it will be analyzed.
+
+### GPU
+
+- 🟢Nvidia ⭐⭐⭐⭐
+- 🔴AMD ⭐⭐
+- 🔵Intel ⭐⭐
+
+#### *Reliability*
+ - ⭐⭐⭐⭐⭐: [GPU Microarchitectures tested > 3] && [SW versions tested per generation > 2]
+ - ⭐⭐⭐⭐: [GPU Microarchitectures tested > 2] && [SW versions tested per generation > 2]
+ - ⭐⭐⭐: [GPUs tested > 1] && [SW versions tested > 1]
+ - ⭐⭐: [Actual GPU tested]
+ - ⭐: [Theoretical testing]
 
 ## Disclaimer ⚠️
 
