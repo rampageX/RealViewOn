@@ -147,10 +147,12 @@ SolidWorks & RealView are registered trademarks of Dassault Systèmes.
 
 ## Star History
 
-<a href="https://www.star-history.com/#ianalexis/Real-View-On-Releases&Date">
+## Star History
+
+<a href="https://www.star-history.com/#ianalexis/RealViewOn&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ianalexis/Real-View-On-Releases&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ianalexis/Real-View-On-Releases&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ianalexis/Real-View-On-Releases&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ianalexis/RealViewOn&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ianalexis/RealViewOn&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ianalexis/RealViewOn&type=Date" />
  </picture>
 </a>
