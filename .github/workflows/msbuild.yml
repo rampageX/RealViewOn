@@ -211,43 +211,23 @@ jobs:
 
                       Write-Host "🔍 Procesando commit $shortHash : $subject"
 
-                      # Lista de extensiones de archivos a ignorar en el changelog
-                      # Estos archivos generalmente no representan cambios funcionales del código
-                      $ignoredExtensions = @(
-                        '\.md$',      # Documentación (README.md, etc.)
-                        '\.txt$',     # Archivos de texto
-                        '\.json$',    # JSON (configuración)
-                        '\.png$',     # Imágenes PNG
-                        '\.jpg$',     # Imágenes JPEG
-                        '\.jpeg$',    # Imágenes JPEG alternativo
-                        '\.gif$',     # Imágenes GIF
-                        '\.svg$',     # Imágenes SVG
-                        '\.webp$',    # Imágenes WebP
-                        '\.gitignore$', # Archivos Git
-                        '\.gitattributes$', # Archivos Git
-                        'LICENSE$',   # Archivos de licencia
-                        'CODE_OF_CONDUCT\.md$', # Código de conducta
-                        'CONTRIBUTING\.md$', # Guía de contribución
-                        'SECURITY\.md$' # Política de seguridad
-                      )
-
-                      # Verificar si el commit modificó solo archivos ignorados
-                      # Si es así, omitirlo del changelog para mantener limpio el "What's Changed"
+                      # Verificar si el commit modificó solo archivos que no interesan para el changelog
                       $modifiedFiles = @(git show --name-only --pretty=format: $fullHash)
                       $ignoredFiles = @()
                       $relevantFiles = @()
 
                       foreach ($file in $modifiedFiles) {
                         if ($file -and $file.Trim() -ne "") {
-                          $isIgnored = $false
-                          foreach ($pattern in $ignoredExtensions) {
-                            if ($file -match $pattern) {
-                              $ignoredFiles += $file
-                              $isIgnored = $true
-                              break
-                            }
-                          }
-                          if (-not $isIgnored) {
+                          # Lógica simplificada: ignorar archivos comunes PERO mantener msbuild.yml
+                          $isCommonFile = $file -match '\.(md|txt|json|png|jpg|jpeg|gif|svg|ico|webp)$|^\.gitignore$|^\.gitattributes$|^LICENSE$|^CODE_OF_CONDUCT\.md$|^CONTRIBUTING\.md$|^SECURITY\.md$'
+                          $isYamlFile = $file -match '\.yml$|\.yaml$'
+                          $isMsbuildYml = $file -match 'msbuild\.yml$|msbuild\.yaml$'
+
+                          $shouldIgnore = $isCommonFile -or ($isYamlFile -and -not $isMsbuildYml)
+
+                          if ($shouldIgnore) {
+                            $ignoredFiles += $file
+                          } else {
                             $relevantFiles += $file
                           }
                         }
