@@ -176,7 +176,26 @@ jobs:
             }
 
             $releases = Invoke-RestMethod -Uri "https://api.github.com/repos/${{ github.repository }}/releases" -Headers $headers -Method Get
-            $lastRelease = $releases | Where-Object { $_.tag_name -ne "v${{ steps.get_version.outputs.VERSION }}" } | Select-Object -First 1
+            
+            # Determinar si este es un release estable
+            $isStable = "${{ steps.get_version.outputs.IS_STABLE }}" -eq "True"
+            
+            if ($isStable) {
+              # Para releases estables, buscar la última release estable (no pre-release)
+              Write-Host "📋 Buscando última release estable (ignorando pre-releases)..."
+              $lastRelease = $releases | Where-Object { $_.tag_name -ne "v${{ steps.get_version.outputs.VERSION }}" -and -not $_.prerelease } | Select-Object -First 1
+              
+              if ($lastRelease) {
+                Write-Host "📋 Última release estable encontrada: $($lastRelease.tag_name)"
+              } else {
+                Write-Host "📋 No se encontró release estable anterior, buscando cualquier release..."
+                $lastRelease = $releases | Where-Object { $_.tag_name -ne "v${{ steps.get_version.outputs.VERSION }}" } | Select-Object -First 1
+              }
+            } else {
+              # Para pre-releases, usar el comportamiento actual (última release sin importar tipo)
+              Write-Host "📋 Buscando última release (incluyendo pre-releases)..."
+              $lastRelease = $releases | Where-Object { $_.tag_name -ne "v${{ steps.get_version.outputs.VERSION }}" } | Select-Object -First 1
+            }
 
             if ($lastRelease) {
               $lastTag = $lastRelease.tag_name
